@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const block = document.createElement("div");
+      const text = document.createElement("div");
+
+      text.textContent =
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. ";
+      document.body.style.display = "flex";
+      document.body.style.flexDirection = "column";
+      document.body.style.alignItems = "center";
+
+      text.style.border = "solid 1px red";
+      block.style.width = "20%";
+      text.style.borderRadius = "5px";
+      text.style.padding = "6px";
+      text.style.margin = "0px";
+
+      const ul = document.createElement("ul");
+      const item_1 = document.createElement("li");
+      const item_2 = document.createElement("li");
+      const item_3 = document.createElement("li");
+
+      const a_1 = document.createElement("a");
+      const linkText_1 = document.createTextNode("intocode");
+      a_1.href = "http://example.com";
+      a_1.append(linkText_1);
+      item_1.append(a_1);
+
+      const a_2 = document.createElement("a");
+      const linkText_2 = document.createTextNode("google");
+      a_2.href = "https://www.google.ru/";
+      a_2.append(linkText_2);
+      item_2.append(a_2);
+
+      const a_3 = document.createElement("a");
+      const linkText_3 = document.createTextNode("instagram");
+      a_3.href = "https://www.instagram.com/";
+      a_3.append(linkText_3);
+      item_3.append(a_3);
+
+      ul.append(item_1, item_2, item_3);
+
+      ul.style.display = "flex";
+      ul.style.flexDirection = "row";
+      ul.style.alignItems = "center";
+      ul.style.justifyContent = "space-between";
+      ul.style.marginTop = "10px";
+      ul.style.padding = "0px";
+      ul.style.listStyleType = "none";
+
+      document.body.prepend(block);
+      block.prepend(text);
+      block.append(ul);
+    </script>
+  </body>
+</html>
